@@ -180,6 +180,53 @@ npx react-native run-ios --simulator="iPhone 16"
 
 On the setup screen, enter your Mac's IP and PSK. If your phone is on the same Wi-Fi as your Mac, use your Mac's local IP (e.g., `192.168.1.x:7860`).
 
+## Building the Android App
+
+The mobile app also supports Android. You'll need:
+
+- **Android Studio** (Arctic Fox or newer)
+- **Android SDK** (API level 24+, recommend 34)
+- **JDK 17+** (bundled with Android Studio)
+
+### Setup
+
+```bash
+cd mobile
+npm install
+```
+
+### Run on Emulator
+
+```bash
+npx react-native run-android
+```
+
+Or open `mobile/android` in Android Studio and run from there.
+
+### Run on Device
+
+1. Enable USB debugging on your Android device
+2. Connect via USB and verify: `adb devices`
+3. Run: `npx react-native run-android`
+
+### Build APK
+
+```bash
+cd mobile/android
+./gradlew assembleDebug
+# APK at: app/build/outputs/apk/debug/app-debug.apk
+```
+
+### Android Configuration
+
+The Android project is configured with:
+- **minSdkVersion:** 24 (Android 7.0+)
+- **targetSdkVersion:** 36
+- **Hermes engine:** Enabled by default
+- **New Architecture:** Enabled
+
+Network permissions (INTERNET, cleartext traffic for ws://) are pre-configured in AndroidManifest.xml.
+
 ## Development
 
 ```bash
