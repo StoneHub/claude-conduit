@@ -1,8 +1,18 @@
 # Claude Conduit
 
-Monitor and interact with your [Claude Code](https://docs.anthropic.com/en/docs/claude-code) sessions from your iPhone — remotely, over your network.
+Claude Conduit is the **mobile surface** of Monroe's AI session companion work.
+
+It lets you monitor and interact with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) sessions from your phone — remotely, over your network.
 
 Claude Conduit runs a lightweight daemon on your Mac that discovers all your Claude Code sessions, then bridges them to a mobile app via WebSocket. You get a full terminal view with xterm.js, so you see exactly what you'd see on your Mac.
+
+## Product family position
+
+If you want the broader repo map:
+- **`claude-conduit`** = mobile remote session client
+- **`clawd-pager`** = physical companion devices / pager hardware
+
+Both are part of the same broader direction: **remote AI session companions** across multiple surfaces.
 
 **Use cases:**
 - Kick off a long Claude Code task, walk away, check progress from your phone
